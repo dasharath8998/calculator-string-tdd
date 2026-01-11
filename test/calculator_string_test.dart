@@ -7,4 +7,10 @@ void main() {
     final result = calculator.add('');
     expect(result, 0);
   });
+
+  test('returns the same number', () {
+    final calculator = CalculatorString();
+    final result = calculator.add('1');
+    expect(result, 1);
+  });
 }
