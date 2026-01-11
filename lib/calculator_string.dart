@@ -1,14 +1,13 @@
 class CalculatorString {
   int add(String numbers) {
-    if(numbers.isEmpty) {
+    if (numbers.isEmpty) {
       return 0;
     }
-    if (numbers.contains(',')) {
-      List<String> parts = numbers.split(',');
-      int  first = int.parse(parts[0]);
-      int  second = int.parse(parts[1]);
-      return first + second;
+    List<String> parts = numbers.split(',');
+    int sum = 0;
+    for (int i = 0; i < parts.length; i++) {
+      sum = sum + int.parse(parts[i]);
     }
-    return int.parse(numbers);
+    return sum;
   }
 }
