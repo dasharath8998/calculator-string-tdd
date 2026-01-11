@@ -25,4 +25,11 @@ void main() {
     final result = calculator.add('1,2,3');
     expect(result, 6);
   });
+
+  test('newline with comma', () {
+    final calculator = CalculatorString();
+    final result = calculator.add('1\n2,3');
+    expect(result, 6);
+  });
+
 }
