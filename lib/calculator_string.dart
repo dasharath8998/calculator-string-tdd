@@ -11,13 +11,18 @@ class CalculatorString {
     }
     numbers = numbers.replaceAll('\n', delimiter);
     List<String> parts = numbers.split(delimiter);
+    List<int> negativeNumbers = [];
     int sum = 0;
     for (int i = 0; i < parts.length; i++) {
       int value = int.parse(parts[i]);
       if (value < 0) {
-        throw Exception('negative numbers not allowed');
+        negativeNumbers.add(value);
       }
       sum = sum + value;
+    }
+    if (negativeNumbers.isNotEmpty) {
+      throw Exception(
+          'negative numbers not allowed: ${negativeNumbers.join(', ')}');
     }
     return sum;
   }
