@@ -5,6 +5,6 @@ void main() {
   test('returns 0 for empty string', () {
     final calculator = CalculatorString();
     final result = calculator.add('');
-    expect(result, 1);
+    expect(result, 0);
   });
 }
