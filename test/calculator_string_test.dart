@@ -34,7 +34,7 @@ void main() {
 
   test('custom delimiter in input', () {
     final calculator = CalculatorString();
-    final result = calculator.add('//,\n1,2');
+    final result = calculator.add('//;\n1;2');
     expect(result, 3);
   });
 
