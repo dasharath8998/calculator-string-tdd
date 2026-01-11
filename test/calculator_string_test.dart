@@ -56,4 +56,11 @@ void main() {
     expect(exception.toString(), contains('-2'));
     expect(exception.toString(), contains('-3'));
   });
+
+  test('ignores values greater than 1000', () {
+    final calculator = CalculatorString();
+    final result = calculator.add('2,1001');
+    expect(result, 2);
+  });
+
 }
