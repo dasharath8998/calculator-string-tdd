@@ -44,5 +44,16 @@ void main() {
     expect(() => calculator.add('1,-1,2'), throwsException);
   });
 
-
+  test('throws exception list all negative numbers', () {
+    final calculator = CalculatorString();
+    Exception? exception;
+    try {
+      calculator.add('1,-2,-3');
+    } catch (e) {
+      exception = e as Exception;
+      expect(exception.toString(), contains('negative numbers not allowed'));
+      expect(exception.toString(), contains('-2'));
+      expect(exception.toString(), contains('-3'));
+    }
+  });
 }
