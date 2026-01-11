@@ -13,7 +13,11 @@ class CalculatorString {
     List<String> parts = numbers.split(delimiter);
     int sum = 0;
     for (int i = 0; i < parts.length; i++) {
-      sum = sum + int.parse(parts[i]);
+      int value = int.parse(parts[i]);
+      if (value < 0) {
+        throw Exception('negative numbers not allowed');
+      }
+      sum = sum + value;
     }
     return sum;
   }
