@@ -38,4 +38,11 @@ void main() {
     expect(result, 3);
   });
 
+  test('throws exception on negative number', () {
+    final calculator = CalculatorString();
+
+    expect(() => calculator.add('1,-1,2'), throwsException);
+  });
+
+
 }
