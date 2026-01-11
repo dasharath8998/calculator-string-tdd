@@ -51,9 +51,9 @@ void main() {
       calculator.add('1,-2,-3');
     } catch (e) {
       exception = e as Exception;
-      expect(exception.toString(), contains('negative numbers not allowed'));
-      expect(exception.toString(), contains('-2'));
-      expect(exception.toString(), contains('-3'));
     }
+    expect(exception.toString(), contains('negative numbers not allowed'));
+    expect(exception.toString(), contains('-2'));
+    expect(exception.toString(), contains('-3'));
   });
 }
