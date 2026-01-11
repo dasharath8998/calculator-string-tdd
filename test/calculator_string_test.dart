@@ -13,4 +13,10 @@ void main() {
     final result = calculator.add('1');
     expect(result, 1);
   });
+
+  test('returns sum of two numbers', () {
+    final calculator = CalculatorString();
+    final result = calculator.add('1,5');
+    expect(result, 6);
+  });
 }
