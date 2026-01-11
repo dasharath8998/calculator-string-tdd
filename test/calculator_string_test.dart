@@ -19,4 +19,10 @@ void main() {
     final result = calculator.add('1,5');
     expect(result, 6);
   });
+
+  test('returns sum when more than two numbers', () {
+    final calculator = CalculatorString();
+    final result = calculator.add('1,2,3');
+    expect(result, 6);
+  });
 }
