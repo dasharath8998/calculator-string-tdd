@@ -17,8 +17,9 @@ class CalculatorString {
       int value = int.parse(parts[i]);
       if (value < 0) {
         negativeNumList.add(value);
+      } else if (value <= 1000) {
+        sum = sum + value;
       }
-      sum = sum + value;
     }
     if (negativeNumList.isNotEmpty) {
       throw Exception(
